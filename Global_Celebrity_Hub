@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GLOBAL CELEBRITIES HUB | VIP ELITE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  /* ── CORE COLORS ── */
+  --sky:         #0ea5e9;
+  --sky-light:   #bae6fd;
+  --sky-mid:     #38bdf8;
+  --sky-dark:    #0369a1;
+  --sky-deep:    #082f49;
+  --body-bg:     #f0f9ff;
+  --body-bg2:    #e0f2fe;
+  --white:       #ffffff;
+  --text-dark:   #0c1a2e;
+  --text-body:   #1e3a5f;
+  --text-soft:   #4a7fa5;
+  --glass-sky:   rgba(14,165,233,0.08);
+  --glass-sky-border: rgba(14,165,233,0.2);
+  --shadow-sky:  0 20px 50px rgba(14,165,233,0.12);
+  --radius-xl:   28px;
+  --radius-lg:   18px;
+  --radius-md:   12px;
+  --transition:  all 0.45s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* ── GLOBAL RESET & BASE ── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}
+html{scroll-behavior:smooth;scroll-padding-top:90px;background:var(--body-bg)}
+body{font-family:'Poppins',sans-serif;color:var(--text-dark);overflow-x:hidden;line-height:1.75}
+
+/* ── PROGRESS BAR ── */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sky-light), var(--sky), var(--sky-dark));
+  box-shadow: 0 0 12px var(--sky);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+  pointer-events: none;
+}
+
+/* ── BACK TO TOP ── */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  background: rgba(255,255,255,0.95);
+  border: 2px solid var(--sky);
+  color: var(--sky-dark);
+  border-radius: 50%;
+  font-size: 22px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(14,165,233,0.25);
+  z-index: 999;
+  transition: var(--transition);
+}
+.back-to-top:hover {
+  transform: translateY(-4px) scale(1.08);
+  background: white;
+  box-shadow: 0 15px 40px rgba(14,165,233,0.35);
+}
+
+/* ── HERO PARTICLES ── */
+#heroParticles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.particle {
+  position: absolute;
+  background: rgba(186, 230, 253, 0.75);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--sky-light);
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+  0% { transform: translateY(120px) scale(0.6); opacity: 0; }
+  15% { opacity: 0.85; }
+  85% { opacity: 0.85; }
+  100% { transform: translateY(-900px) scale(0.3); opacity: 0; }
+}
+
+/* ── CONTAINER ── */
+.container{width:100%;max-width:1400px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--sky-deep)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--sky),var(--sky-dark));border-radius:8px;border:2px solid var(--sky-deep)}
+
+/* ── 3D LOGO GLOBE ── */
+.logo-orbit-wrap{position:relative;width:64px;height:64px;display:flex;align-items:center;justify-content:center;flex-shrink:0;perspective:350px;}
+.logo-orbit-wrap::before{content:'';position:absolute;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,0.22) 0%,transparent 70%);animation:outerPulse 3s ease-in-out infinite alternate;}
+@keyframes outerPulse{0%{transform:scale(1);opacity:0.5}100%{transform:scale(1.18);opacity:1}}
+.logo-globe{width:52px;height:52px;border-radius:50%;position:relative;z-index:3;background:radial-gradient(circle at 38% 32%, rgba(186,230,253,0.9) 0%,var(--sky) 35%,#0369a1 65%,#082f49 100%);box-shadow:inset -10px -8px 20px rgba(0,0,0,0.4),inset 4px 4px 12px rgba(186,230,253,0.4),0 0 20px rgba(14,165,233,0.55),0 0 45px rgba(3,105,161,0.3);animation:globeSpin 7s linear infinite;transform-style:preserve-3d;overflow:hidden;}
+.logo-globe::before{content:'';position:absolute;inset:0;border-radius:50%;background:linear-gradient(transparent 24%,rgba(0,0,0,0.12) 25%,transparent 26%),linear-gradient(transparent 49%,rgba(0,0,0,0.12) 50%,transparent 51%),linear-gradient(transparent 74%,rgba(0,0,0,0.12) 75%,transparent 76%);animation:gridSlide 3.5s linear infinite;}
+.logo-globe::after{content:'';position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(90deg,transparent 0%,transparent 14%,rgba(0,0,0,0.08) 14.5%,transparent 15%);animation:longSlide 7s linear infinite;}
+@keyframes globeSpin{0%{transform:rotateY(0deg) rotateX(12deg)}100%{transform:rotateY(360deg) rotateX(12deg)}}
+@keyframes gridSlide{0%{background-position:0 0%}100%{background-position:0 100%}}
+@keyframes longSlide{0%{background-position:0% 0}100%{background-position:100% 0}}
+.logo-text-overlay{position:absolute;z-index:10;font-family:'Cinzel',serif;font-size:13px;font-weight:900;letter-spacing:2px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,0.6),0 0 12px rgba(14,165,233,0.8);pointer-events:none;top:50%;left:50%;transform:translate(-50%,-50%);}
+.orbit-ring{position:absolute;border-radius:50%;border:1.5px solid rgba(14,165,233,0.65);z-index:5;pointer-events:none;}
+.orbit-ring-1{width:72px;height:72px;top:50%;left:50%;margin:-36px 0 0 -36px;animation:orbitEq 4s linear infinite;box-shadow:0 0 6px rgba(14,165,233,0.4);}
+.orbit-ring-2{width:72px;height:24px;top:50%;left:50%;margin:-12px 0 0 -36px;border-color:rgba(56,189,248,0.5);animation:orbitTilt 6s linear infinite reverse;}
+.orbit-ring-3{width:24px;height:72px;top:50%;left:50%;margin:-36px 0 0 -12px;border-color:rgba(14,165,233,0.3);animation:orbitTilt2 5s linear infinite;}
+.orbit-dot{position:absolute;width:6px;height:6px;background:#bae6fd;border-radius:50%;box-shadow:0 0 8px var(--sky);top:-3px;left:50%;margin-left:-3px;transform-origin:50% 39px;animation:dotSpin 4s linear infinite;}
+@keyframes orbitEq{0%{transform:rotateX(75deg) rotateZ(0deg)}100%{transform:rotateX(75deg) rotateZ(360deg)}}
+@keyframes orbitTilt{0%{transform:rotateZ(-25deg) rotateX(80deg) rotateZ(0deg)}100%{transform:rotateZ(-25deg) rotateX(80deg) rotateZ(360deg)}}
+@keyframes orbitTilt2{0%{transform:rotateZ(65deg) rotateY(70deg) rotateZ(0deg)}100%{transform:rotateZ(65deg) rotateY(70deg) rotateZ(360deg)}}
+@keyframes dotSpin{0%{transform:rotate(0deg) translateX(0)}100%{transform:rotate(360deg) translateX(0)}}
+
+/* ── NAVIGATION ── */
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,0.88);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-bottom:1px solid rgba(14,165,233,0.2);transition:var(--transition);}
+.nav-container{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:20px;}
+.nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nav-brand-text{font-family:'Cinzel',serif;font-size:clamp(14px,1.8vw,20px);font-weight:900;letter-spacing:3px;background:linear-gradient(135deg,var(--sky-dark) 0%,var(--sky) 50%,var(--sky-dark) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap;}
+nav ul{display:flex;align-items:center;gap:clamp(14px,2.5vw,32px);list-style:none}
+nav ul li a{text-decoration:none;color:var(--text-body);font-size:clamp(11px,1vw,13px);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.3s;position:relative;padding:6px 0;}
+nav ul li a::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:2px;background:linear-gradient(90deg,var(--sky),var(--sky-dark));transition:all 0.3s cubic-bezier(0.4,0,0.2,1);transform:translateX(-50%);}
+nav ul li a:hover{color:var(--sky-dark)}
+nav ul li a:hover::after{width:100%}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:1100;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--sky);border-radius:2px;transition:var(--transition);transform-origin:center;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(8,30,60,0.98);backdrop-filter:blur(30px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity 0.4s ease;}
+.mobile-menu.open{display:flex;opacity:1;pointer-events:all}
+.mobile-menu a{font-family:'Cinzel',serif;font-size:clamp(22px,5vw,36px);color:rgba(255,255,255,0.8);text-decoration:none;letter-spacing:3px;transition:color 0.3s;}
+.mobile-menu a:hover{color:var(--sky)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:clamp(120px,15vh,180px) 0 80px;background:linear-gradient(to bottom,rgba(2,30,60,0.55) 0%,rgba(8,47,73,0.85) 100%),url('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2000&auto=format&fit=crop');background-size:cover;background-position:center;background-attachment:fixed;overflow:hidden;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:180px;background:linear-gradient(to top,#f0f9ff,transparent);pointer-events:none;}
+.hero-content{max-width:980px;margin:0 auto;text-align:center;animation:heroIn 1.3s cubic-bezier(0.16,1,0.3,1) both;position:relative;z-index:2;}
+@keyframes heroIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── 3D ELITE BADGE ── */
+.hero-badge{display:inline-flex;align-items:center;padding:14px 36px;border-radius:50px;border:1px solid rgba(186,230,253,0.5);color:#fff;font-size:12px;font-weight:800;letter-spacing:4px;text-transform:uppercase;margin-bottom:36px;background:linear-gradient(135deg,rgba(14,165,233,0.25),rgba(3,105,161,0.25));position:relative;transform-style:preserve-3d;animation:badge3D 6s ease-in-out infinite, pulseBorderBlue 3s infinite alternate;perspective:600px;overflow:hidden;}
+.hero-badge::before{content:'';position:absolute;inset:0;border-radius:50px;background:linear-gradient(90deg,transparent 0%,rgba(186,230,253,0.25) 40%,rgba(255,255,255,0.12) 50%,rgba(186,230,253,0.25) 60%,transparent 100%);animation:shineSlide 2.5s ease-in-out infinite;}
+@keyframes badge3D{0%{transform:perspective(600px) rotateX(0deg) rotateY(0deg) scale(1);box-shadow:0 4px 30px rgba(14,165,233,0.3),0 0 0 1px rgba(14,165,233,0.3);}20%{transform:perspective(600px) rotateX(8deg) rotateY(-5deg) scale(1.04);box-shadow:0 20px 50px rgba(14,165,233,0.5),0 0 40px rgba(56,189,248,0.2);}40%{transform:perspective(600px) rotateX(-5deg) rotateY(8deg) scale(1.02);box-shadow:0 12px 40px rgba(14,165,233,0.4),0 0 60px rgba(56,189,248,0.15);}60%{transform:perspective(600px) rotateX(6deg) rotateY(6deg) scale(1.05);box-shadow:0 25px 60px rgba(14,165,233,0.55),0 0 80px rgba(56,189,248,0.2);}80%{transform:perspective(600px) rotateX(-3deg) rotateY(-8deg) scale(1.03);box-shadow:0 15px 45px rgba(14,165,233,0.45);}100%{transform:perspective(600px) rotateX(0deg) rotateY(0deg) scale(1);box-shadow:0 4px 30px rgba(14,165,233,0.3);}}
+@keyframes shineSlide{0%{transform:translateX(-100%) skewX(-15deg)}60%{transform:translateX(200%) skewX(-15deg)}100%{transform:translateX(200%) skewX(-15deg)}}
+@keyframes pulseBorderBlue{0%{border-color:rgba(14,165,233,0.3);box-shadow:0 0 15px rgba(14,165,233,0.15)}100%{border-color:rgba(186,230,253,0.8);box-shadow:0 0 35px rgba(14,165,233,0.4),0 0 70px rgba(14,165,233,0.15)}}
+.hero h1{font-family:'Cinzel',serif;font-size:clamp(36px,7.5vw,96px);font-weight:900;line-height:1.05;letter-spacing:clamp(1px,0.3vw,4px);margin-bottom:28px;background:linear-gradient(to bottom,#ffffff 15%,#bae6fd 50%,#38bdf8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.5));}
+.hero p{font-size:clamp(14px,1.8vw,19px);color:rgba(240,249,255,0.92);max-width:820px;margin:0 auto 48px;font-weight:300;line-height:1.85;}
+.hero-btns{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:clamp(14px,2vw,20px) clamp(24px,3.5vw,44px);border-radius:14px;text-decoration:none;font-weight:700;font-size:clamp(11px,1.1vw,14px);letter-spacing:2px;text-transform:uppercase;transition:var(--transition);min-width:200px;position:relative;overflow:hidden;border:none;cursor:pointer;font-family:'Poppins',sans-serif;}
+.btn-primary{background:linear-gradient(135deg,var(--sky) 0%,var(--sky-dark) 100%);color:#fff;box-shadow:0 10px 35px rgba(14,165,233,0.35);}
+.btn-primary::before{content:'';position:absolute;top:0;left:-150%;width:110%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.28),transparent);transform:skewX(-25deg);transition:0.7s;}
+.btn-primary:hover::before{left:150%}
+.btn-primary:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 18px 45px rgba(14,165,233,0.5);background:linear-gradient(135deg,var(--sky-mid) 0%,var(--sky) 50%,var(--sky-dark) 100%)}
+.btn-secondary{background:rgba(255,255,255,0.12);border:1px solid rgba(186,230,253,0.4);color:#fff;backdrop-filter:blur(15px);}
+.btn-secondary:hover{background:rgba(14,165,233,0.2);border-color:rgba(186,230,253,0.8);transform:translateY(-5px);color:#bae6fd}
+.btn-sky{background:linear-gradient(135deg,var(--sky) 0%,var(--sky-dark) 100%);color:#fff;box-shadow:0 10px 35px rgba(14,165,233,0.3);}
+.btn-sky::before{content:'';position:absolute;top:0;left:-150%;width:110%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transform:skewX(-25deg);transition:0.7s;}
+.btn-sky:hover::before{left:150%}
+.btn-sky:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 18px 45px rgba(14,165,233,0.45);background:linear-gradient(135deg,var(--sky-mid) 0%,var(--sky) 100%)}
+
+/* ── BODY CONTENT ── */
+.body-content{background:linear-gradient(180deg,#f0f9ff 0%,#e0f2fe 15%,#f8fdff 35%,#e0f2fe 55%,#f0f9ff 70%,#e8f5fe 85%,#f0f9ff 100%);position:relative;overflow:hidden;}
+.body-content::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 40% at 20% 20%,rgba(14,165,233,0.08) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 80% 60%,rgba(56,189,248,0.07) 0%,transparent 60%),radial-gradient(ellipse 50% 30% at 50% 90%,rgba(14,165,233,0.05) 0%,transparent 60%);}
+.body-content > *{position:relative;z-index:1}
+.body-content section{padding:clamp(80px,10vw,130px) 0;position:relative}
+
+.sky-section .section-title-wrap{text-align:center;margin-bottom:clamp(50px,7vw,85px)}
+.sky-section .section-title{font-family:'Cinzel',serif;font-size:clamp(28px,4.5vw,56px);font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,var(--sky-dark) 0%,var(--sky) 50%,var(--sky-dark) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:18px;}
+.sky-section .section-subtitle{max-width:780px;margin:0 auto;color:var(--text-body);font-size:clamp(13px,1.4vw,16px);font-weight:400;line-height:1.85;}
+
+.sky-divider{display:flex;align-items:center;gap:20px;max-width:320px;margin:0 auto 16px;}
+.sky-divider::before,.sky-divider::after{content:'';flex:1;height:1.5px;background:linear-gradient(90deg,transparent,var(--sky),transparent);}
+.sky-divider span{color:var(--sky);font-size:18px;animation:rotateStar 6s linear infinite;}
+@keyframes rotateStar{to{transform:rotate(360deg)}}
+
+/* ── SKY PANELS ── */
+.sky-panel{background:rgba(255,255,255,0.7);border:1px solid rgba(14,165,233,0.2);border-radius:var(--radius-xl);padding:clamp(32px,4vw,50px) clamp(24px,3vw,38px);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:var(--transition);position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(14,165,233,0.1), 0 2px 8px rgba(0,0,0,0.06);}
+.sky-panel::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--sky-light),var(--sky),var(--sky-dark));border-radius:var(--radius-xl) var(--radius-xl) 0 0;}
+.sky-panel::after{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(14,165,233,0.06),transparent 50%);opacity:0;transition:opacity 0.5s ease;pointer-events:none;}
+.sky-panel:hover{transform:translateY(-10px) scale(1.015);border-color:rgba(14,165,233,0.4);box-shadow:0 24px 60px rgba(14,165,233,0.18),0 8px 20px rgba(0,0,0,0.08)}
+.sky-panel:hover::after{opacity:1}
+.sky-panel .panel-icon{font-size:2.4rem;margin-bottom:18px;display:block;filter:drop-shadow(0 0 8px rgba(14,165,233,0.5));}
+.sky-panel h3{font-family:'Cinzel',serif;font-size:clamp(17px,2vw,22px);font-weight:700;color:var(--sky-dark);margin-bottom:16px;letter-spacing:1px;transition:color 0.3s;}
+.sky-panel:hover h3{color:var(--sky)}
+.sky-panel p{font-size:clamp(13px,1.2vw,15px);color:var(--text-body);font-weight:400;line-height:1.85;}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,32px)}
+
+/* ── ENTERTAINMENT ── */
+.entertainment-section{padding:clamp(70px,9vw,120px) 0;overflow:hidden;position:relative;}
+.entertainment-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(14,165,233,0.07) 0%,transparent 70%);pointer-events:none;}
+.ent-header{text-align:center;margin-bottom:50px}
+.ent-header .ent-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--sky);margin-bottom:16px;}
+.ent-header h2{font-family:'Cinzel',serif;font-size:clamp(26px,4vw,50px);font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,var(--sky-dark) 0%,var(--sky) 50%,var(--sky-dark) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:14px;}
+.ent-header p{max-width:680px;margin:0 auto;color:var(--text-body);font-size:clamp(13px,1.3vw,15px);font-weight:400;line-height:1.85}
+.marquee-track{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(14,165,233,0.2);border-bottom:1px solid rgba(14,165,233,0.2);padding:14px 0;margin-bottom:50px;background:rgba(14,165,233,0.05);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);}
+.marquee-inner{display:inline-block;animation:marqueeScroll 28s linear infinite;font-size:12px;letter-spacing:3px;font-weight:700;text-transform:uppercase;color:var(--sky-dark);}
+.marquee-inner span{margin:0 40px}
+@keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.slideshow-stage{position:relative;height:clamp(280px,45vw,560px);border-radius:var(--radius-xl);overflow:hidden;box-shadow:0 40px 100px rgba(14,165,233,0.2),0 10px 30px rgba(0,0,0,0.15);border:2px solid rgba(14,165,233,0.2);}
+.slideshow-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease,transform 1.4s cubic-bezier(0.16,1,0.3,1);transform:scale(1.03);}
+.slideshow-slide.active{opacity:1;transform:scale(1)}
+.slideshow-slide img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.65) saturate(1.1);}
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(2,27,50,0.93) 0%,rgba(2,27,50,0.2) 60%,transparent 100%);}
+.slide-info{position:absolute;bottom:0;left:0;right:0;padding:clamp(24px,4vw,48px);}
+.slide-type-badge{display:inline-block;padding:6px 18px;border-radius:50px;border:1px solid rgba(14,165,233,0.5);color:var(--sky-light);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:rgba(14,165,233,0.15);margin-bottom:14px;backdrop-filter:blur(10px);}
+.slide-title{font-family:'Cinzel',serif;font-size:clamp(18px,3.5vw,38px);font-weight:700;color:#fff;line-height:1.2;text-shadow:0 2px 20px rgba(0,0,0,0.8);}
+.slide-desc{font-size:clamp(12px,1.2vw,15px);color:rgba(255,255,255,0.85);margin-top:8px;font-weight:300;}
+.slideshow-dots{display:flex;justify-content:center;gap:10px;margin-top:24px;}
+.slide-dot{width:8px;height:8px;border-radius:50%;background:rgba(14,165,233,0.25);border:1px solid rgba(14,165,233,0.5);cursor:pointer;transition:all 0.3s;}
+.slide-dot.active{width:28px;border-radius:4px;background:var(--sky);border-color:var(--sky)}
+.slideshow-thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(100px,12vw,160px),1fr));gap:12px;margin-top:28px;}
+.thumb-item{border-radius:var(--radius-md);overflow:hidden;cursor:pointer;position:relative;aspect-ratio:16/9;border:2px solid rgba(14,165,233,0.15);transition:var(--transition);}
+.thumb-item img{width:100%;height:100%;object-fit:cover;filter:brightness(0.55) saturate(0.8);transition:var(--transition)}
+.thumb-item:hover img,.thumb-item.active img{filter:brightness(0.9) saturate(1.2)}
+.thumb-item::after{content:'';position:absolute;inset:0;border-radius:inherit;border:2px solid transparent;transition:border-color 0.3s;}
+.thumb-item.active::after,.thumb-item:hover::after{border-color:var(--sky)}
+
+/* ── STATS ── */
+.stats{background:linear-gradient(135deg,rgba(14,165,233,0.08) 0%,rgba(255,255,255,0.5) 50%,rgba(14,165,233,0.08) 100%);}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,3vw,30px)}
+.stat-box{text-align:center;padding:clamp(32px,5vw,55px) 20px;border-radius:var(--radius-lg);background:rgba(255,255,255,0.75);border:1px solid rgba(14,165,233,0.18);transition:var(--transition);position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(14,165,233,0.08);}
+.stat-box::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sky-light),var(--sky),var(--sky-dark));transform:scaleX(0);transition:transform 0.5s ease;}
+.stat-box:hover::before{transform:scaleX(1)}
+.stat-box:hover{transform:translateY(-8px);border-color:rgba(14,165,233,0.35);box-shadow:0 20px 50px rgba(14,165,233,0.15),0 4px 12px rgba(0,0,0,0.05)}
+.stat-num{font-family:'Cinzel',serif;font-size:clamp(32px,5vw,68px);font-weight:700;background:linear-gradient(135deg,var(--sky-dark) 0%,var(--sky) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;display:block;}
+.stat-label{font-size:11px;color:var(--text-soft);letter-spacing:2.5px;text-transform:uppercase;font-weight:700}
+
+/* ── PORTAL ── */
+.portal-interface{background:rgba(255,255,255,0.8);border:1px solid rgba(14,165,233,0.2);border-radius:var(--radius-xl);padding:clamp(30px,5vw,60px) clamp(20px,4vw,50px);backdrop-filter:blur(20px);box-shadow:0 20px 60px rgba(14,165,233,0.12),0 4px 16px rgba(0,0,0,0.06);}
+.portal-controls{display:flex;flex-direction:column;gap:20px;margin-bottom:40px}
+.search-wrapper{position:relative}
+.search-input{width:100%;padding:18px 28px;border-radius:var(--radius-lg);background:rgba(255,255,255,0.9);border:2px solid rgba(14,165,233,0.2);color:var(--text-dark);font-family:'Poppins',sans-serif;font-size:15px;outline:none;transition:all 0.3s;}
+.search-input::placeholder{color:var(--text-soft)}
+.search-input:focus{border-color:var(--sky);background:#fff;box-shadow:0 0 0 4px rgba(14,165,233,0.12)}
+.filter-tabs{display:flex;gap:10px;flex-wrap:wrap}
+.tab-btn{padding:11px 22px;border-radius:var(--radius-md);border:2px solid rgba(14,165,233,0.2);background:rgba(255,255,255,0.8);color:var(--text-body);font-size:clamp(10px,1vw,13px);font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:var(--transition);font-family:'Poppins',sans-serif;}
+.tab-btn:hover{border-color:var(--sky);color:var(--sky-dark);background:#fff}
+.tab-btn.active{background:linear-gradient(135deg,var(--sky),var(--sky-dark));color:#fff;border-color:transparent;box-shadow:0 8px 22px rgba(14,165,233,0.3)}
+.directory-status{margin-bottom:18px;font-size:14px;color:var(--sky-dark);font-weight:600;letter-spacing:0.5px}
+.celebrities-scroll-container{max-height:520px;overflow-y:auto;padding-right:12px;border:1px solid rgba(14,165,233,0.1);border-radius:var(--radius-lg);background:rgba(240,249,255,0.5);}
+.celebrities-scroll-container::-webkit-scrollbar{width:5px}
+.celebrities-scroll-container::-webkit-scrollbar-thumb{background:rgba(14,165,233,0.35);border-radius:10px}
+.celebrities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:18px}
+.celebrity-item-card{background:rgba(255,255,255,0.9);border:1px solid rgba(14,165,233,0.15);border-radius:var(--radius-md);padding:18px 22px;display:flex;flex-direction:column;gap:5px;transition:var(--transition);position:relative;overflow:hidden;}
+.celebrity-item-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--sky-light),var(--sky));border-radius:3px 0 0 3px;}
+.celebrity-item-card:hover{background:#fff;border-color:rgba(14,165,233,0.35);transform:translateY(-4px);box-shadow:0 10px 28px rgba(14,165,233,0.15)}
+.celeb-name{font-size:14px;font-weight:600;color:var(--text-dark);letter-spacing:0.3px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.celeb-tag{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:700;color:var(--sky)}
+
+/* ── MEMBERSHIP ── */
+.membership-box{position:relative;border-radius:var(--radius-xl);padding:clamp(60px,9vw,110px) clamp(24px,5vw,65px);text-align:center;background:linear-gradient(135deg,var(--sky-dark) 0%,var(--sky-deep) 40%,#0c2340 100%);border:1px solid rgba(14,165,233,0.25);box-shadow:0 40px 90px rgba(14,165,233,0.2),inset 0 1px 0 rgba(255,255,255,0.1);overflow:hidden;}
+.membership-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 120%,rgba(14,165,233,0.3) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 30% -20%,rgba(56,189,248,0.2) 0%,transparent 60%);pointer-events:none;}
+.membership-box::after{content:'VIP';position:absolute;font-family:'Cinzel',serif;font-size:clamp(100px,18vw,280px);font-weight:900;color:rgba(255,255,255,0.04);bottom:-40px;right:-10px;pointer-events:none;line-height:1;}
+.membership-box .shimmer-band{position:absolute;width:200%;height:2px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:shimmerSlide 4s linear infinite;top:30%;}
+.membership-box .shimmer-band:nth-child(2){top:65%;animation-delay:2s;opacity:0.5;}
+@keyframes shimmerSlide{0%{transform:translateX(-50%)}100%{transform:translateX(0%)}}
+.membership-box h2{font-family:'Cinzel',serif;font-size:clamp(26px,4.5vw,54px);color:#fff;margin-bottom:24px;letter-spacing:2px;position:relative;z-index:2;}
+.membership-box p{max-width:800px;margin:0 auto 44px;font-size:clamp(14px,1.5vw,18px);color:rgba(255,255,255,0.88);font-weight:300;line-height:1.95;position:relative;z-index:2;}
+.membership-box .hero-badge{position:relative;z-index:2;border-color:rgba(255,255,255,0.25);color:#fff;background:rgba(255,255,255,0.08);animation:none;transform:none;}
+
+/* ── REVIEWS ── */
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,32px)}
+.review-card{padding:clamp(30px,4vw,50px) clamp(22px,3vw,38px);background:rgba(255,255,255,0.85);border:1px solid rgba(14,165,233,0.15);border-radius:var(--radius-xl);box-shadow:0 4px 20px rgba(14,165,233,0.08);transition:var(--transition);position:relative;overflow:hidden;}
+.review-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sky-light),var(--sky),var(--sky-dark));}
+.review-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(14,165,233,0.15);border-color:rgba(14,165,233,0.3)}
+.review-stars{font-size:18px;color:#f59e0b;margin-bottom:22px;letter-spacing:5px}
+.review-card h3{font-size:clamp(16px,1.8vw,20px);font-weight:600;color:var(--text-dark);margin-bottom:14px}
+.review-card p{font-size:clamp(13px,1.2vw,15px);color:var(--text-body);line-height:1.85;font-weight:400;margin-bottom:22px}
+.review-badge{display:inline-block;padding:5px 16px;border-radius:50px;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.25);color:var(--sky-dark);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
+
+/* ── FORM ── */
+.form-wrapper{display:grid;grid-template-columns:42% 58%;border-radius:var(--radius-xl);overflow:hidden;border:1px solid rgba(14,165,233,0.2);box-shadow:0 30px 80px rgba(14,165,233,0.12),0 8px 20px rgba(0,0,0,0.06);}
+.form-left{padding:clamp(50px,7vw,90px) clamp(32px,5vw,60px);background:linear-gradient(135deg,var(--sky-dark) 0%,var(--sky-deep) 100%);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.form-left::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 110%,rgba(14,165,233,0.3) 0%,transparent 60%);}
+.form-left h2{font-family:'Cinzel',serif;font-size:clamp(26px,3.5vw,46px);line-height:1.2;color:#fff;margin-bottom:24px;position:relative;z-index:1;}
+.form-left p{color:rgba(255,255,255,0.82);font-weight:300;font-size:clamp(13px,1.2vw,15px);line-height:1.85;position:relative;z-index:1;}
+.form-right{padding:clamp(50px,7vw,90px) clamp(28px,5vw,70px);background:#fff;}
+.form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{margin-bottom:24px;position:relative}
+.form-group.full-width{grid-column:span 2}
+.form-group label{display:block;margin-bottom:10px;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--sky-dark)}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:16px 22px;border-radius:12px;border:2px solid rgba(14,165,233,0.15);background:rgba(240,249,255,0.5);color:var(--text-dark);font-family:'Poppins',sans-serif;font-size:14px;transition:all 0.3s;outline:none;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-soft)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--sky);background:#fff;box-shadow:0 0 0 4px rgba(14,165,233,0.1);}
+.form-group select option{background:#fff;color:var(--text-dark)}
+.form-group textarea{color:var(--text-dark)}
+.searchable-combobox-wrapper{position:relative;width:100%}
+.searchable-combobox-wrapper::after{content:'▾';position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--sky);font-size:16px;pointer-events:none;transition:transform 0.3s;}
+.searchable-combobox-wrapper.active::after{transform:translateY(-50%) rotate(180deg)}
+.combobox-options-panel{position:absolute;top:calc(100% + 6px);left:0;width:100%;max-height:240px;overflow-y:auto;background:#fff;border:2px solid rgba(14,165,233,0.3);border-radius:14px;z-index:999;box-shadow:0 20px 50px rgba(14,165,233,0.15);display:none;}
+.combobox-options-panel::-webkit-scrollbar{width:5px}
+.combobox-options-panel::-webkit-scrollbar-thumb{background:rgba(14,165,233,0.4);border-radius:10px}
+.combobox-option-node{padding:13px 22px;font-size:13px;color:var(--text-dark);cursor:pointer;transition:all 0.2s;border-bottom:1px solid rgba(14,165,233,0.08);display:flex;justify-content:space-between;align-items:center;}
+.combobox-option-node:last-child{border-bottom:none}
+.combobox-option-node:hover{background:rgba(14,165,233,0.07);color:var(--sky-dark);padding-left:28px}
+.combobox-option-node .node-category{font-size:10px;text-transform:uppercase;color:var(--sky);letter-spacing:0.5px}
+.combobox-empty-message{padding:20px;text-align:center;color:var(--text-soft);font-size:13px}
+.preferred-note{display:block;margin-top:7px;font-size:10px;color:var(--sky);letter-spacing:1px;text-transform:uppercase}
+.submit-btn{width:100%;padding:20px;border:none;border-radius:14px;font-size:clamp(12px,1.2vw,14px);font-weight:800;letter-spacing:2px;text-transform:uppercase;cursor:pointer;background:linear-gradient(135deg,var(--sky) 0%,var(--sky-dark) 100%);color:#fff;transition:var(--transition);box-shadow:0 10px 32px rgba(14,165,233,0.25);font-family:'Poppins',sans-serif;position:relative;overflow:hidden;}
+.submit-btn::before{content:'';position:absolute;top:0;left:-150%;width:110%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transform:skewX(-25deg);transition:0.7s;}
+.submit-btn:hover::before{left:150%}
+.submit-btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(14,165,233,0.4);background:linear-gradient(135deg,var(--sky-mid),var(--sky))}
+
+/* ══════════════════════════════════════
+   TERMS & CONDITIONS
+   ══════════════════════════════════════ */ú
+.tc-block{
+  margin-top:36px;
+  border:1px solid rgba(14,165,233,0.2);
+  border-radius:var(--radius-lg);
+  background:rgba(240,249,255,0.6);
+  overflow:hidden;
+}
+.tc-header{
+  display:flex;align-items:center;gap:12px;
+  padding:18px 26px;
+  background:linear-gradient(90deg,rgba(14,165,233,0.08),rgba(3,105,161,0.05));
+  border-bottom:1px solid rgba(14,165,233,0.12);
+}
+.tc-header-icon{font-size:20px;}
+.tc-header-text{
+  font-family:'Cinzel',serif;font-size:clamp(13px,1.4vw,16px);font-weight:700;
+  letter-spacing:1.5px;color:var(--sky-dark);
+}
+.tc-preview{
+  padding:20px 26px 0;
+  font-size:clamp(12px,1.15vw,14px);color:var(--text-body);line-height:1.8;
+  font-style:italic;opacity:0.85;
+}
+.tc-body{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.tc-body.tc-open{max-height:2400px;}
+.tc-inner{padding:20px 26px 26px;}
+.tc-intro{
+  font-size:clamp(12px,1.15vw,14px);color:var(--text-body);line-height:1.85;
+  margin-bottom:20px;padding-bottom:16px;
+  border-bottom:1px solid rgba(14,165,233,0.12);
+}
+.tc-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.tc-list li{
+  display:flex;align-items:flex-start;gap:14px;
+  font-size:clamp(12px,1.1vw,14px);color:var(--text-body);
+  line-height:1.75;
+  padding:10px 16px;
+  border-radius:10px;
+  border:1px solid rgba(14,165,233,0.1);
+  background:rgba(255,255,255,0.6);
+  transition:all 0.25s;
+}
+.tc-list li:hover{background:#fff;border-color:rgba(14,165,233,0.25);transform:translateX(4px);}
+.tc-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:26px;height:26px;border-radius:50%;
+  background:linear-gradient(135deg,var(--sky),var(--sky-dark));
+  color:#fff;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px;
+}
+.tc-toggle-wrap{
+  padding:16px 26px;
+  border-top:1px solid rgba(14,165,233,0.1);
+  display:flex;justify-content:center;
+}
+.tc-toggle-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 28px;border-radius:50px;
+  border:2px solid rgba(14,165,233,0.3);
+  background:rgba(255,255,255,0.8);
+  color:var(--sky-dark);
+  font-family:'Poppins',sans-serif;font-size:clamp(11px,1vw,13px);font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;
+  transition:var(--transition);
+}
+.tc-toggle-btn:hover{
+  background:linear-gradient(135deg,var(--sky),var(--sky-dark));
+  color:#fff;border-color:transparent;
+  box-shadow:0 8px 24px rgba(14,165,233,0.3);transform:translateY(-2px);
+}
+.tc-toggle-btn .tc-arrow{
+  display:inline-block;transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);font-size:14px;
+}
+.tc-toggle-btn.open .tc-arrow{transform:rotate(180deg);}
+
+/* ── CONTACT SECTION ── */
+.contact-section{background:linear-gradient(135deg,#f0f9ff 0%,#e0f4ff 50%,#f5fbff 100%);}
+.contact-wrapper{display:grid;grid-template-columns:38% 62%;gap:clamp(24px,4vw,44px)}
+.contact-card{padding:clamp(40px,5vw,60px) clamp(28px,4vw,48px);background:rgba(255,255,255,0.85);border:1px solid rgba(14,165,233,0.2);border-radius:var(--radius-xl);box-shadow:0 8px 32px rgba(14,165,233,0.1);}
+.contact-card h3{font-family:'Cinzel',serif;font-size:clamp(20px,2.5vw,28px);color:var(--sky-dark);margin-bottom:32px;letter-spacing:1px}
+.contact-item{margin-bottom:28px}
+.contact-label{display:block;font-size:11px;letter-spacing:2px;color:var(--sky);margin-bottom:7px;font-weight:700;text-transform:uppercase}
+.contact-item p,.contact-item a{font-size:clamp(14px,1.4vw,16px);color:var(--text-dark);text-decoration:none;transition:color 0.3s}
+.contact-item a:hover{color:var(--sky)}
+.location-grid{display:flex;flex-direction:column;gap:16px}
+
+/* ── LOCATION CARDS ── */
+.location-box{
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  transition:transform 0.35s ease, box-shadow 0.35s ease;
+  cursor:default;
+  border:1px solid rgba(14,165,233,0.18);
+  background:#fff;
+  box-shadow:0 4px 18px rgba(14,165,233,0.08);
+  display:grid;
+  grid-template-columns:auto 1fr;
+  opacity:0;
+  transform:translateX(-30px);
+}
+.location-box.loc-animated{
+  opacity:1;
+  transform:translateX(0);
+  transition:opacity 0.55s ease, transform 0.55s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;
+}
+.location-box:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(14,165,233,0.15);}
+.location-box.loc-animated:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(14,165,233,0.15);}
+
+.loc-accent{
+  width:6px;
+  flex-shrink:0;
+}
+.loc-usa .loc-accent{background:linear-gradient(180deg,#B22234,#3C3B6E);}
+.loc-uk  .loc-accent{background:linear-gradient(180deg,#CF142B,#00247D);}
+.loc-au  .loc-accent{background:linear-gradient(180deg,#00008B,#E01A22);}
+
+.loc-body{
+  padding:22px 28px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.loc-flag-emoji{
+  font-size:clamp(36px,5vw,52px);
+  flex-shrink:0;
+  line-height:1;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,0.12));
+}
+.loc-text{flex:1;}
+.loc-country{
+  font-family:'Cinzel',serif;
+  font-size:clamp(14px,1.6vw,18px);
+  font-weight:700;
+  letter-spacing:1.5px;
+  margin-bottom:6px;
+}
+.loc-usa .loc-country{color:#B22234;}
+.loc-uk  .loc-country{color:#00247D;}
+.loc-au  .loc-country{color:#00008B;}
+.loc-address{
+  font-size:clamp(12px,1.1vw,14px);
+  color:var(--text-body);
+  line-height:1.65;
+  margin-bottom:10px;
+  font-weight:400;
+}
+.loc-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 14px;border-radius:50px;
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+}
+.loc-usa .loc-badge{background:rgba(178,34,52,0.08);border:1px solid rgba(178,34,52,0.22);color:#B22234;}
+.loc-uk  .loc-badge{background:rgba(0,36,125,0.08);border:1px solid rgba(0,36,125,0.22);color:#00247D;}
+.loc-au  .loc-badge{background:rgba(0,0,139,0.07);border:1px solid rgba(0,0,139,0.2);color:#00008B;}
+
+/* ── SITE INFO SECTION ── */
+.site-info-section{background:linear-gradient(180deg,#0a2540 0%,#082f49 50%,#061e32 100%);padding:clamp(80px,11vw,140px) 0 60px;position:relative;overflow:hidden;}
+.site-info-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 50% at 20% 30%,rgba(14,165,233,0.12) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 80% 70%,rgba(56,189,248,0.08) 0%,transparent 60%);}
+.si-logo-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:clamp(56px,8vw,90px);position:relative;z-index:2;}
+.si-logo-globe-ring{position:relative;width:100px;height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.si-logo-globe-ring::before{content:'';position:absolute;width:130px;height:130px;border-radius:50%;border:1.5px dashed rgba(14,165,233,0.25);animation:ringRotate 20s linear infinite;}
+.si-logo-globe-ring::after{content:'';position:absolute;width:115px;height:115px;border-radius:50%;border:1px solid rgba(56,189,248,0.15);animation:ringRotate 14s linear infinite reverse;}
+@keyframes ringRotate{to{transform:rotate(360deg)}}
+.si-globe{width:80px;height:80px;border-radius:50%;z-index:3;position:relative;background:radial-gradient(circle at 38% 32%, rgba(186,230,253,0.9) 0%,var(--sky) 35%,#0369a1 65%,#082f49 100%);box-shadow:0 0 30px rgba(14,165,233,0.6),0 0 60px rgba(14,165,233,0.25),inset -8px -6px 18px rgba(0,0,0,0.35),inset 4px 4px 10px rgba(186,230,253,0.3);animation:globeSpin 7s linear infinite;overflow:hidden;}
+.si-globe::before{content:'';position:absolute;inset:0;border-radius:50%;background:linear-gradient(transparent 24%,rgba(0,0,0,0.1) 25%,transparent 26%),linear-gradient(transparent 49%,rgba(0,0,0,0.1) 50%,transparent 51%),linear-gradient(transparent 74%,rgba(0,0,0,0.1) 75%,transparent 76%);animation:gridSlide 3.5s linear infinite;}
+.si-globe-text{position:absolute;z-index:5;font-family:'Cinzel',serif;font-size:16px;font-weight:900;color:#fff;letter-spacing:1px;text-shadow:0 0 12px rgba(14,165,233,0.8);}
+.si-brand-name{font-family:'Cinzel',serif;font-size:clamp(18px,2.8vw,32px);font-weight:900;letter-spacing:4px;background:linear-gradient(135deg,#fff 20%,var(--sky-light) 55%,var(--sky) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;}
+.si-brand-tag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(186,230,253,0.5);font-weight:600;}
+.si-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);position:relative;z-index:2;margin-bottom:clamp(60px,8vw,100px);}
+.si-col-title{font-family:'Cinzel',serif;font-size:clamp(13px,1.4vw,16px);font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#fff;margin-bottom:28px;padding-bottom:14px;position:relative;display:flex;align-items:center;gap:10px;}
+.si-col-title::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:2px;background:linear-gradient(90deg,var(--sky),transparent);border-radius:2px;}
+.si-col-title .col-icon{font-size:18px;}
+.si-quick-links{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.si-quick-links li a{display:flex;align-items:center;gap:10px;color:rgba(186,230,253,0.7);text-decoration:none;font-size:clamp(13px,1.2vw,15px);font-weight:400;padding:9px 0;border-bottom:1px solid rgba(14,165,233,0.08);transition:all 0.3s ease;letter-spacing:0.3px;}
+.si-quick-links li a:hover{color:#fff;padding-left:8px;border-bottom-color:rgba(14,165,233,0.3);}
+.si-quick-links li a::before{content:'›';color:var(--sky);font-size:18px;line-height:1;transition:transform 0.3s;}
+.si-quick-links li a:hover::before{transform:translateX(4px);}
+.si-benefits{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.si-benefits li{display:flex;align-items:flex-start;gap:12px;color:rgba(186,230,253,0.8);font-size:clamp(12px,1.15vw,14px);line-height:1.55;padding:10px 14px;border-radius:10px;border:1px solid rgba(14,165,233,0.1);background:rgba(14,165,233,0.04);transition:all 0.3s;}
+.si-benefits li:hover{background:rgba(14,165,233,0.1);border-color:rgba(14,165,233,0.25);color:#fff;transform:translateX(4px);}
+.si-benefits li .b-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.si-faq{display:flex;flex-direction:column;gap:10px;}
+.faq-item{border:1px solid rgba(14,165,233,0.12);border-radius:12px;overflow:hidden;background:rgba(14,165,233,0.04);transition:border-color 0.3s;}
+.faq-item.open{border-color:rgba(14,165,233,0.35);background:rgba(14,165,233,0.08);}
+.faq-q{width:100%;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;background:none;border:none;cursor:pointer;color:rgba(186,230,253,0.9);font-family:'Poppins',sans-serif;font-size:clamp(12px,1.1vw,14px);font-weight:600;text-align:left;letter-spacing:0.2px;transition:color 0.3s;}
+.faq-q:hover,.faq-item.open .faq-q{color:#fff;}
+.faq-chevron{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:1px solid rgba(14,165,233,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--sky);transition:transform 0.35s,background 0.3s;}
+.faq-item.open .faq-chevron{transform:rotate(180deg);background:var(--sky);color:#fff;border-color:var(--sky);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.45s cubic-bezier(0.16,1,0.3,1), padding 0.3s;padding:0 18px;color:rgba(186,230,253,0.65);font-size:clamp(11px,1vw,13px);line-height:1.75;}
+.faq-item.open .faq-a{max-height:200px;padding:0 18px 16px;}
+.si-bottom-bar{border-top:1px solid rgba(14,165,233,0.15);padding-top:32px;display:flex;align-items:center;justify-content:center;gap:16px;position:relative;z-index:2;}
+.si-bottom-bar .si-divider-glow{height:1px;width:80px;background:linear-gradient(90deg,transparent,var(--sky),transparent);}
+.si-bottom-bar span{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(186,230,253,0.35);font-weight:600;}
+
+/* ── FOOTER ── */
+footer{padding:clamp(32px,5vw,55px) 20px;text-align:center;font-size:clamp(10px,1.1vw,13px);letter-spacing:2px;color:rgba(255,255,255,0.5);border-top:1px solid rgba(14,165,233,0.2);background:linear-gradient(135deg,var(--sky-deep) 0%,#041525 100%);}
+.footer-logo{font-family:'Cinzel',serif;font-size:clamp(16px,2.5vw,24px);font-weight:900;letter-spacing:4px;background:linear-gradient(135deg,#fff 30%,var(--sky-light) 70%,var(--sky) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:18px;display:block;}
+.footer-links{display:flex;gap:clamp(14px,3vw,32px);justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.footer-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:clamp(10px,1vw,12px);letter-spacing:1.5px;text-transform:uppercase;transition:color 0.3s;}
+.footer-links a:hover{color:var(--sky-light)}
+.footer-divider{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--sky),transparent);margin:0 auto 18px}
+
+/* ── REVEAL ── */
+.reveal-init{opacity:0;transform:translate3d(0,45px,0);transition:opacity 0.85s cubic-bezier(0.16,1,0.3,1),transform 0.85s cubic-bezier(0.16,1,0.3,1)}
+.reveal-visible{opacity:1;transform:translate3d(0,0,0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1200px){.about-grid,.review-grid{grid-template-columns:repeat(2,1fr)}.celebrities-grid{grid-template-columns:repeat(3,1fr)}.form-wrapper,.contact-wrapper{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.form-left{padding:50px 40px}.si-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}}
+@media(max-width:900px){nav ul{display:none}.hamburger{display:flex}.celebrities-grid{grid-template-columns:repeat(2,1fr)}.slideshow-thumbs{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}.si-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.hero{background-attachment:scroll}.about-grid{grid-template-columns:1fr}.form-grid-2{grid-template-columns:1fr}.form-group.full-width{grid-column:span 1}.review-grid{grid-template-columns:1fr}.contact-wrapper{grid-template-columns:1fr}.loc-body{gap:14px;padding:18px 18px}}
+@media(max-width:580px){.stats-grid{grid-template-columns:repeat(2,1fr)}.celebrities-grid{grid-template-columns:1fr 1fr}.membership-box{padding:60px 22px}.portal-interface{padding:28px 16px}.filter-tabs{gap:8px}.tab-btn{padding:9px 14px;font-size:10px}.hero-btns{flex-direction:column;align-items:center}.btn{min-width:0;width:100%;max-width:320px}.loc-flag-emoji{font-size:32px}.loc-body{padding:14px 14px;gap:12px}}
+@media(max-width:400px){.celebrities-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progressBar"></div>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobileMenu()">Home</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#portal" onclick="closeMobileMenu()">Celebrities</a>
+  <a href="#membership" onclick="closeMobileMenu()">Membership</a>
+  <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+  <a href="#form" onclick="closeMobileMenu()">Join</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<nav id="mainNav">
+  <div class="container nav-container">
+    <a href="#home" class="nav-brand">
+      <div class="logo-orbit-wrap">
+        <div class="orbit-ring orbit-ring-1"><div class="orbit-dot"></div></div>
+        <div class="orbit-ring orbit-ring-2"></div>
+        <div class="orbit-ring orbit-ring-3"></div>
+        <div class="logo-globe"></div>
+        <span class="logo-text-overlay">GCH</span>
+      </div>
+      <span class="nav-brand-text">GLOBAL CELEBRITIES HUB</span>
+    </a>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portal">Celebrities</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#form">Join</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div id="heroParticles"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">✦ World's Most Elite Celebrity Experience ✦</div>
+      <h1>GLOBAL CELEBRITIES HUB</h1>
+      <p>Meet the world's biggest stars through a premium celebrity fan platform built for unforgettable experiences, backstage tours, VIP events, luxury entertainment and global celebrity interactions.</p>
+      <div class="hero-btns">
+        <a href="#membership" class="btn btn-primary">Explore Membership</a>
+        <a href="#form" class="btn btn-secondary">Join Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="body-content">
+
+<!-- ABOUT -->
+<section class="sky-section reveal-init" id="about">
+  <div class="container">
+    <div class="section-title-wrap">
+      <div class="sky-divider"><span>✦</span></div>
+      <h2 class="section-title">ABOUT GCH</h2>
+      <p class="section-subtitle">GLOBAL CELEBRITIES HUB is a luxury entertainment and fan engagement organization created to connect fans with global superstars from Hollywood, music, sports and media industries worldwide.</p>
+    </div>
+    <div class="about-grid">
+      <div class="sky-panel"><span class="panel-icon">🎭</span><h3>VIP Access</h3><p>Enjoy backstage access, celebrity meetups, private interactions, red carpet events and premium entertainment experiences curated exclusively for our elite members.</p></div>
+      <div class="sky-panel"><span class="panel-icon">🏆</span><h3>Official Membership</h3><p>Every application is verified through our secure management system to maintain authenticity, prestige and professional standards at every level.</p></div>
+      <div class="sky-panel"><span class="panel-icon">🌐</span><h3>Global Celebrities</h3><p>Connect with legendary stars from Hollywood, music, sports, television and global entertainment industries — over 1,000 verified celebrity profiles and counting.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CELEBRITY PORTAL -->
+<section class="sky-section portal-section reveal-init" id="portal">
+  <div class="container">
+    <div class="section-title-wrap">
+      <div class="sky-divider"><span>✦</span></div>
+      <h2 class="section-title">CELEBRITY INDEX PLATFORM</h2>
+      <p class="section-subtitle">Browse through our official encrypted roster containing verified global figures, icons, and trending creators for the 2025–2026 calendar cycle.</p>
+    </div>
+    <div class="portal-interface">
+      <div class="portal-controls">
+        <div class="search-wrapper">
+          <input type="text" id="celebSearch" class="search-input" placeholder="🔍  Search celebrity name, title, or category…">
+        </div>
+        <div class="filter-tabs">
+          <button class="tab-btn active" onclick="filterNiche('all',this)">All Roster</button>
+          <button class="tab-btn" onclick="filterNiche('actor',this)">Actors / Actresses</button>
+          <button class="tab-btn" onclick="filterNiche('musician',this)">Musicians</button>
+          <button class="tab-btn" onclick="filterNiche('presenter',this)">TV / Media</button>
+          <button class="tab-btn" onclick="filterNiche('speaker',this)">Speakers / Icons</button>
+        </div>
+      </div>
+      <div class="directory-status" id="directoryCount">Showing 1000+ Global Figures</div>
+      <div class="celebrities-scroll-container">
+        <div class="celebrities-grid" id="celebrityOutputContainer"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTERTAINMENT -->
+<section class="entertainment-section sky-section reveal-init" id="entertainment">
+  <div class="container">
+    <div class="ent-header">
+      <span class="ent-eyebrow">✦ Exclusive Content ✦</span>
+      <h2>MOVIE &amp; MUSIC UNIVERSE</h2>
+      <p>Immerse yourself in the world of cinema and music. From blockbuster premieres to chart-topping releases — experience the glamour that defines our celebrity culture.</p>
+    </div>
+    <div class="marquee-track">
+      <span class="marquee-inner">
+        <span>🎬 HOLLYWOOD BLOCKBUSTERS</span><span>🎵 CHART-TOPPING ALBUMS</span><span>🏆 AWARD SEASON</span><span>🎤 WORLD TOURS</span><span>🌟 RED CARPET EVENTS</span><span>🎧 STUDIO SESSIONS</span><span>📽️ FILM PREMIERES</span><span>🎸 MUSIC FESTIVALS</span>
+        <span>🎬 HOLLYWOOD BLOCKBUSTERS</span><span>🎵 CHART-TOPPING ALBUMS</span><span>🏆 AWARD SEASON</span><span>🎤 WORLD TOURS</span><span>🌟 RED CARPET EVENTS</span><span>🎧 STUDIO SESSIONS</span><span>📽️ FILM PREMIERES</span><span>🎸 MUSIC FESTIVALS</span>
+      </span>
+    </div>
+    <div class="slideshow-stage" id="slideshowStage"></div>
+    <div class="slideshow-dots" id="slideshowDots"></div>
+    <div class="slideshow-thumbs" id="slideshowThumbs"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats sky-section reveal-init">
+  <div class="container">
+    <div class="section-title-wrap" style="margin-bottom:clamp(40px,6vw,70px)">
+      <div class="sky-divider"><span>✦</span></div>
+      <h2 class="section-title">GCH BY THE NUMBERS</h2>
+      <p class="section-subtitle">The numbers that speak to our scale, impact, and commitment to delivering world-class celebrity fan experiences.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-box"><span class="stat-num">1,000+</span><span class="stat-label">Celebrity Profiles</span></div>
+      <div class="stat-box"><span class="stat-num">120K+</span><span class="stat-label">Registered Fans</span></div>
+      <div class="stat-box"><span class="stat-num">95+</span><span class="stat-label">Luxury Events</span></div>
+      <div class="stat-box"><span class="stat-num">24/7</span><span class="stat-label">Premium Support</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section class="membership sky-section reveal-init" id="membership">
+  <div class="container">
+    <div class="membership-box">
+      <div class="shimmer-band"></div>
+      <div class="shimmer-band"></div>
+      <div class="hero-badge" style="margin-bottom:28px">✦ Exclusive Access ✦</div>
+      <h2>PREMIUM MEMBERSHIP</h2>
+      <p>Become part of a global entertainment community where fans gain access to exclusive celebrity opportunities, VIP entertainment experiences and luxury fan events around the world.</p>
+      <a href="#form" class="btn btn-sky">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews sky-section reveal-init" id="reviews">
+  <div class="container">
+    <div class="section-title-wrap">
+      <div class="sky-divider"><span>✦</span></div>
+      <h2 class="section-title">FAN REVIEWS</h2>
+      <p class="section-subtitle">Thousands of fans around the world continue to share unforgettable experiences through GLOBAL CELEBRITIES HUB premium entertainment community.</p>
+    </div>
+    <div class="review-grid">
+      <div class="review-card"><div class="review-stars">★★★★★</div><h3>Jessica Morgan</h3><p>GCH completely changed my celebrity fan experience. The professionalism, luxury atmosphere and exclusive opportunities are truly world class.</p><div class="review-badge">5 STAR EXPERIENCE</div></div>
+      <div class="review-card"><div class="review-stars">★★★★☆</div><h3>Daniel Brooks</h3><p>The membership process was smooth and professional. GCH delivers an elite entertainment experience that feels authentic and exciting.</p><div class="review-badge">4 STAR EXPERIENCE</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><h3>Amelia Carter</h3><p>From VIP access to luxury events, everything about GCH feels premium and unforgettable. Highly recommended for celebrity fans worldwide.</p><div class="review-badge">5 STAR EXPERIENCE</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><h3>Michael Reynolds</h3><p>One of the most impressive celebrity communities online. The event quality and fan engagement exceeded my expectations completely.</p><div class="review-badge">5 STAR EXPERIENCE</div></div>
+      <div class="review-card"><div class="review-stars">★★★★☆</div><h3>Sophia Williams</h3><p>I appreciate the professionalism and exciting opportunities provided by GCH. The global fan community is amazing and welcoming.</p><div class="review-badge">4 STAR EXPERIENCE</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><h3>Kwame Asante</h3><p>The backstage access and red carpet events are unlike anything I've experienced before. GCH truly delivers a five-star celebrity platform.</p><div class="review-badge">5 STAR EXPERIENCE</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN FORM -->
+<section class="form-section sky-section reveal-init" id="form">
+  <div class="container">
+    <div class="section-title-wrap">
+      <div class="sky-divider"><span>✦</span></div>
+      <h2 class="section-title">JOIN THE HUB</h2>
+      <p class="section-subtitle">Complete the membership application below to become part of the GLOBAL CELEBRITIES HUB premium celebrity fan community.</p>
+    </div>
+    <div class="form-wrapper">
+      <div class="form-left">
+        <h2>FAN VALIDATION FORM</h2>
+        <p>Submit your application and our dedicated team will review your profile for official GCH membership access.</p>
+      </div>
+      <div class="form-right">
+        <form id="membershipForm">
+          <div class="form-grid-2">
+            <div class="form-group"><label>Full Name</label><input type="text" placeholder="Enter your full name" required autocomplete="name"></div>
+            <div class="form-group"><label>Email Address</label><input type="email" placeholder="Enter your email address" required autocomplete="email"></div>
+            <div class="form-group"><label>Gender</label><select required><option value="" disabled selected>Select Gender</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="Enter phone number" required autocomplete="tel"></div>
+            <div class="form-group"><label>Nationality</label><input type="text" placeholder="Enter your nationality" required></div>
+            <div class="form-group">
+              <label>Favorite Celebrity Index</label>
+              <div class="searchable-combobox-wrapper" id="formComboboxWrapper">
+                <input type="text" id="celebrityFormSearch" class="searchable-combobox-input" style="width:100%;padding:16px 22px;border-radius:12px;border:2px solid rgba(14,165,233,0.15);background:rgba(240,249,255,0.5);color:#0c1a2e;font-family:'Poppins',sans-serif;font-size:14px;transition:all 0.3s;outline:none;" placeholder="Type to search 1,000+ stars…" autocomplete="off" required>
+                <div class="combobox-options-panel" id="celebrityFormOptions"></div>
+                <input type="hidden" id="celebritySelect" name="selectedCelebrity" required>
+              </div>
+              <span class="preferred-note">* Preferred celebrity selection</span>
+            </div>
+          </div>
+          <div class="form-group full-width">
+            <label>Why Do You Want To Join?</label>
+            <textarea rows="4" placeholder="Tell us about your interest in GCH and the celebrity fan community…" required></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="submit-btn">Submit Application ✦</button>
+        </form>
+
+        <!-- SUCCESS MESSAGE -->
+        <div id="successMessage" style="display:none; text-align:center; padding:40px 20px; background:rgba(16,185,129,0.1); border:1px solid #10b981; border-radius:16px; margin-top:20px;">
+          <h3 style="color:#10b981; margin-bottom:12px;">✅ Application Received Successfully!</h3>
+          <p>Thank you! Our team is reviewing your profile. You will hear from us within 24-48 hours.</p>
+        </div>
+
+        <!-- TERMS & CONDITIONS -->
+        <div class="tc-block">
+          <div class="tc-header">
+            <span class="tc-header-icon">📋</span>
+            <span class="tc-header-text">TERMS &amp; CONDITIONS</span>
+          </div>
+          <p class="tc-preview">By submitting your application you agree to adhere to the following terms set by the GCH management board…</p>
+          <div class="tc-body" id="tcBody" aria-hidden="true">
+            <div class="tc-inner">
+              <p class="tc-intro">To ensure fairness, transparency, and professionalism, applicants who wish to meet and engage with celebrities through GCH must adhere to the following terms:</p>
+              <ul class="tc-list">
+                <li><span class="tc-num">1</span><span><strong>Eligibility Criteria</strong> — Applicants must meet the standards set by GCH's management board, including industry executives and coordinators.</span></li>
+                <li><span class="tc-num">2</span><span><strong>Age Requirement</strong> — Applicants must be at least 18 years old unless otherwise approved by GCH.</span></li>
+                <li><span class="tc-num">3</span><span><strong>Verification Process</strong> — All applicants must undergo identity verification to ensure authenticity.</span></li>
+                <li><span class="tc-num">4</span><span><strong>Membership Approval</strong> — Approval is determined solely by the GCH management board.</span></li>
+                <li><span class="tc-num">5</span><span><strong>Non-Transferable Membership</strong> — Membership privileges cannot be transferred or shared.</span></li>
+                <li><span class="tc-num">6</span><span><strong>Code of Conduct</strong> — Members must maintain respectful behavior during all interactions with celebrities.</span></li>
+                <li><span class="tc-num">7</span><span><strong>Confidentiality Agreement</strong> — Members must not disclose private details of celebrity interactions without consent.</span></li>
+                <li><span class="tc-num">8</span><span><strong>Event Participation</strong> — Attendance at meet-and-greet events requires prior confirmation and adherence to event guidelines.</span></li>
+                <li><span class="tc-num">9</span><span><strong>Travel &amp; Accommodation</strong> — Costs related to travel or accommodation are the responsibility of the member unless otherwise stated.</span></li>
+                <li><span class="tc-num">10</span><span><strong>Cancellation Policy</strong> — Members must provide notice for cancellations; failure to do so may affect eligibility.</span></li>
+                <li><span class="tc-num">11</span><span><strong>Health &amp; Safety</strong> — Members must comply with all health and safety regulations during events.</span></li>
+                <li><span class="tc-num">12</span><span><strong>No Harassment</strong> — Any form of harassment toward celebrities, staff, or other members will result in termination of membership.</span></li>
+                <li><span class="tc-num">13</span><span><strong>Media Restrictions</strong> — Unauthorized recording or photography during private sessions is prohibited.</span></li>
+                <li><span class="tc-num">14</span><span><strong>Payment Terms</strong> — Membership fees, if applicable, must be paid in full before participation.</span></li>
+                <li><span class="tc-num">15</span><span><strong>Refund Policy</strong> — Refunds are subject to GCH's discretion and specific circumstances.</span></li>
+                <li><span class="tc-num">16</span><span><strong>Legal Compliance</strong> — Members must comply with local and international laws during engagements.</span></li>
+                <li><span class="tc-num">17</span><span><strong>Termination of Membership</strong> — GCH reserves the right to revoke membership for violations of terms.</span></li>
+                <li><span class="tc-num">18</span><span><strong>Celebrity Availability</strong> — Engagements are subject to celebrity schedules and availability.</span></li>
+                <li><span class="tc-num">19</span><span><strong>Force Majeure</strong> — GCH is not liable for cancellations due to unforeseen circumstances beyond control.</span></li>
+                <li><span class="tc-num">20</span><span><strong>Amendments</strong> — Terms and conditions may be updated at any time, with notice provided to members.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tc-toggle-wrap">
+            <button class="tc-toggle-btn" id="tcToggleBtn" onclick="toggleTC()" aria-expanded="false" aria-controls="tcBody">
+              <span id="tcBtnLabel">See More</span>
+              <span class="tc-arrow" id="tcArrow">▾</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & LOCATIONS -->
+<section class="contact-section sky-section reveal-init" id="contact">
+  <div class="container">
+    <div class="section-title-wrap">
+      <div class="sky-divider"><span>✦</span></div>
+      <h2 class="section-title">CONTACT GCH ☎️</h2>
+      <p class="section-subtitle">Reach out to GLOBAL CELEBRITIES HUB for membership support, celebrity inquiries and VIP assistance across our global offices.</p>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-card">
+        <h3>Contact Information</h3>
+        <div class="contact-item"><span class="contact-label">Telegram ✉</span><a href="https://t.me/Global_Celebrity_Hub" target="_blank" rel="noopener noreferrer">t.me/Global_Celebrity_Hub</a></div>
+        <div class="contact-item"><span class="contact-label">Email Address 📩</span><a href="mailto:HollywoodCelebrities411@gmail.com">HollywoodCelebrities411@gmail.com</a></div>
+        <div class="contact-item"><span class="contact-label">Availability</span><p>🕚 24/7 Premium Global Fan Support</p></div>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-box loc-usa">
+          <div class="loc-accent"></div>
+          <div class="loc-body">
+            <div class="loc-flag-emoji">🇺🇸</div>
+            <div class="loc-text">
+              <div class="loc-country">UNITED STATES</div>
+              <p class="loc-address">Hollywood Blvd &amp; Highland Ave, Los Angeles, California — epicenter of the global entertainment industry.</p>
+              <div class="loc-badge">🏛️ &nbsp;Hollywood HQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="location-box loc-uk">
+          <div class="loc-accent"></div>
+          <div class="loc-body">
+            <div class="loc-flag-emoji">🇬🇧</div>
+            <div class="loc-text">
+              <div class="loc-country">UNITED KINGDOM</div>
+              <p class="loc-address">Three Mill Lane, London E3 3DU — Britain's world-famous entertainment &amp; media industry hub.</p>
+              <div class="loc-badge">👑 &nbsp;London Office</div>
+            </div>
+          </div>
+        </div>
+        <div class="location-box loc-au">
+          <div class="loc-accent"></div>
+          <div class="loc-body">
+            <div class="loc-flag-emoji">🇦🇺</div>
+            <div class="loc-text">
+              <div class="loc-country">AUSTRALIA</div>
+              <p class="loc-address">38 Driver Avenue, Moore Park, NSW 2021 — our Southern Hemisphere hub serving the Pacific region.</p>
+              <div class="loc-badge">🌏 &nbsp;Sydney Office</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- SITE INFO -->
+<section class="site-info-section reveal-init" id="site-info">
+  <div class="container">
+    <div class="si-logo-wrap">
+      <div class="si-logo-globe-ring">
+        <div class="si-globe">
+          <span class="si-globe-text">GCH</span>
+        </div>
+      </div>
+      <div class="si-brand-name">GLOBAL CELEBRITIES HUB</div>
+      <div class="si-brand-tag">✦ VIP Elite Fan Community ✦</div>
+    </div>
+    <div class="si-grid">
+      <div>
+        <div class="si-col-title"><span class="col-icon">🔗</span> Quick Links</div>
+        <ul class="si-quick-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#membership">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="si-col-title"><span class="col-icon">⭐</span> Benefits</div>
+        <ul class="si-benefits">
+          <li><span class="b-icon">🤝</span> Celebrity Meet &amp; Greet</li>
+          <li><span class="b-icon">✈️</span> Vacations With Celebrity</li>
+          <li><span class="b-icon">🎬</span> Exclusive Backstage Tours</li>
+          <li><span class="b-icon">🎟️</span> VIP Access &amp; Red Carpet</li>
+          <li><span class="b-icon">📞</span> Unlimited Calls With Celebrity</li>
+        </ul>
+      </div>
+      <div>
+        <div class="si-col-title"><span class="col-icon">💬</span> FAQ</div>
+        <div class="si-faq" id="faqContainer">
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>How do I become a GCH member?</span><span class="faq-chevron">▾</span></button>
+            <div class="faq-a">Complete the Fan Validation Form in the Join section with your personal details and favorite celebrity. Our team reviews every application and approves profiles that meet our premium membership standards, typically within 24–48 hours.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>What does a GCH membership include?</span><span class="faq-chevron">▾</span></button>
+            <div class="faq-a">GCH membership unlocks celebrity meet &amp; greet sessions, VIP backstage tours, red carpet event access, exclusive vacation experiences with celebrities, unlimited direct calls, and priority support across all three global offices.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>Are the celebrity profiles on GCH verified?</span><span class="faq-chevron">▾</span></button>
+            <div class="faq-a">Yes. Every one of the 1,000+ profiles in our Celebrity Index Platform is verified through our secure encrypted management system.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)"><span>Which countries does GCH operate in?</span><span class="faq-chevron">▾</span></button>
+            <div class="faq-a">GCH currently operates from three major global offices — Hollywood HQ in Los Angeles USA, our London Office in the UK, and our Sydney Office in Australia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="si-bottom-bar">
+      <div class="si-divider-glow"></div>
+      <span>Connect with our Management team via live chat</span>
+      <div class="si-divider-glow"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">GCH</span>
+  <div class="footer-links">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#portal">Celebrities</a>
+    <a href="#membership">Membership</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+  </div>
+  <div class="footer-divider"></div>
+  <p>© 2026 GLOBAL CELEBRITIES HUB &nbsp;•&nbsp; ALL RIGHTS RESERVED &nbsp;•&nbsp; VIP ELITE</p>
+</footer>
+
+<script>
+/* ── CELEBRITY DATABASE ── */
+const compactCelebrityStrings = [
+    "Timothée Chalamet|actor","Zendaya|actor","Glen Powell|actor","Sydney Sweeney|actor","Austin Butler|actor",
+    "Florence Pugh|actor","Pedro Pascal|actor","Jenna Ortega|actor","Jeremy Allen White|actor","Ayo Edebiri|actor",
+    "Jacob Elordi|actor","Paul Mescal|actor","Margot Robbie|actor","Cillian Murphy|actor","Emma Stone|actor",
+    "Anya Taylor-Joy|actor","Barry Keoghan|actor","Mia Goth|actor","Tom Holland|actor","Robert Downey Jr.|actor",
+    "Scarlett Johansson|actor","Chris Hemsworth|actor","Ryan Gosling|actor","Leonardo DiCaprio|actor","Brad Pitt|actor",
+    "Angelina Jolie|actor","Tom Cruise|actor","Keanu Reeves|actor","Dwayne Johnson|actor","Zac Efron|actor",
+    "Miles Teller|actor","Michael B. Jordan|actor","Jonathan Majors|actor","Lakeith Stanfield|actor","Saoirse Ronan|actor",
+    "Paul Dano|actor","Robert Pattinson|actor","Zoë Kravitz|actor","Ana de Armas|actor","Andrew Garfield|actor",
+    "Tobey Maguire|actor","Benedict Cumberbatch|actor","Tom Hiddleston|actor","Elizabeth Olsen|actor","Brie Larson|actor",
+    "Chris Evans|actor","Sebastian Stan|actor","Anthony Mackie|actor","Idris Elba|actor","Henry Cavill|actor",
+    "Gal Gadot|actor","Jason Momoa|actor","Ben Affleck|actor","Matt Damon|actor","Christian Bale|actor",
+    "Hugh Jackman|actor","Ryan Reynolds|actor","Blake Lively|actor","Emily Blunt|actor","John Krasinski|actor",
+    "Cynthia Erivo|actor","Jonathan Bailey|actor","Simone Ashley|actor","Nicola Coughlan|actor","Luke Thompson|actor",
+    "Millie Bobby Brown|actor","David Harbour|actor","Winona Ryder|actor","Finn Wolfhard|actor","Sadie Sink|actor",
+    "Bella Ramsey|actor","Diego Luna|actor","Rosario Dawson|actor","Hayden Christensen|actor","Ewan McGregor|actor",
+    "Natalie Portman|actor","Jennifer Lawrence|actor","Josh Hutcherson|actor","Liam Hemsworth|actor","Viola Davis|actor",
+    "Peter Dinklage|actor","Dakota Johnson|actor","Jamie Dornan|actor","Chris Pine|actor","Chris Pratt|actor",
+    "Zoe Saldana|actor","Dave Bautista|actor","Bradley Cooper|actor","Vin Diesel|actor","Jason Statham|actor",
+    "Charlize Theron|actor","Helen Mirren|actor","Morgan Freeman|actor","Denzel Washington|actor","Samuel L. Jackson|actor",
+    "Al Pacino|actor","Robert De Niro|actor","Sylvester Stallone|actor","Harrison Ford|actor","Mark Hamill|actor",
+    "Steve Martin|actor","Paul Rudd|actor","Will Ferrell|actor","Jonah Hill|actor","Channing Tatum|actor",
+    "Jon Hamm|actor","Elisabeth Moss|actor","Gwendoline Christie|actor","Emilia Clarke|actor","Kit Harington|actor",
+    "Sophie Turner|actor","Maisie Williams|actor","Lena Headey|actor","Nikolaj Coster-Waldau|actor","Alexander Skarsgård|actor",
+    "Bill Skarsgård|actor","Mads Mikkelsen|actor","Javier Bardem|actor","Penélope Cruz|actor","Salma Hayek|actor",
+    "Sofia Vergara|actor","America Ferrera|actor","George Clooney|actor","Julia Roberts|actor","Sandra Bullock|actor",
+    "Cate Blanchett|actor","Nicole Kidman|actor","Reese Witherspoon|actor","Laura Dern|actor","Kate Winslet|actor",
+    "Kate Hudson|actor","Matthew McConaughey|actor","Mahershala Ali|actor","Lily James|actor","Lily-Rose Depp|actor",
+    "Lily Collins|actor","Ashley Park|actor","Liam Neeson|actor","Pierce Brosnan|actor","Daniel Craig|actor",
+    "Jude Law|actor","Colin Farrell|actor","Andrew Scott|actor","Jessica Chastain|actor","James McAvoy|actor",
+    "Michael Fassbender|actor","Nicholas Hoult|actor","Evan Peters|actor","Oscar Isaac|actor","Adam Driver|actor",
+    "Daisy Ridley|actor","John Boyega|actor","Lupita Nyong'o|actor","Rachel Zegler|actor","Tom Blyth|actor",
+    "Taylor Swift|musician","Beyoncé|musician","Billie Eilish|musician","Olivia Rodrigo|musician","Dua Lipa|musician",
+    "Sabrina Carpenter|musician","Chappell Roan|musician","SZA|musician","The Weeknd|musician","Kendrick Lamar|musician",
+    "Drake|musician","Post Malone|musician","Travis Scott|musician","Bad Bunny|musician","Bruno Mars|musician",
+    "Lady Gaga|musician","Miley Cyrus|musician","Ariana Grande|musician","Justin Bieber|musician","Rihanna|musician",
+    "Charli XCX|musician","Troye Sivan|musician","Gracie Abrams|musician","Tate McRae|musician","Noah Kahan|musician",
+    "Hozier|musician","Lana Del Rey|musician","Zach Bryan|musician","Morgan Wallen|musician","Luke Combs|musician",
+    "Chris Stapleton|musician","Kacey Musgraves|musician","Lainey Wilson|musician","Shaboozey|musician","Teddy Swims|musician",
+    "Benson Boone|musician","Jack Harlow|musician","Doja Cat|musician","Megan Thee Stallion|musician","Cardi B|musician",
+    "Nicki Minaj|musician","Ice Spice|musician","GloRilla|musician","Central Cee|musician","Lil Baby|musician",
+    "Future|musician","Metro Boomin|musician","Lil Nas X|musician","Kid Cudi|musician22wwwA$AP Rocky|musician",
+    "Tyler, The Creator|musician","Frank Ocean|musician","Childish Gambino|musician","J. Cole|musician","21 Savage|musician",
+    "Kanye West|musician","Ed Sheeran|musician","Harry Styles|musician","Niall Horan|musician","Louis Tomlinson|musician",
+    "Zayn Malik|musician","Chris Martin|musician","Sam Smith|musician","Lewis Capaldi|musician","Fred again..|musician",
+    "Calvin Harris|musician","David Guetta|musician","Tems|musician","Burna Boy|musician","Wizkid|musician",
+    "Rema|musician","Ayra Starr|musician","Asake|musician","Peso Pluma|musician","Karol G|musician",
+    "Feid|musician","Rauw Alejandro|musician","Maluma|musician","J Balvin|musician","Rosalía|musician",
+    "Kali Uchis|musician","Omar Apollo|musician","Steve Lacy|musician","Clairo|musician","Mitski|musician",
+    "Halsey|musician","Camila Cabello|musician","Shawn Mendes|musician","Charlie Puth|musician","John Legend|musician",
+    "Alicia Keys|musician","Usher|musician","Chris Brown|musician","Kehlani|musician","Summer Walker|musician",
+    "Jhené Aiko|musician","H.E.R.|musician","Daniel Caesar|musician","Giveon|musician","Brent Faiyaz|musician",
+    "Rod Wave|musician","Lil Durk|musician","Lil Wayne|musician","Eminem|musician","50 Cent|musician",
+    "Snoop Dogg|musician","Dr. Dre|musician","Jay-Z|musician","Rick Ross|musician","Meek Mill|musician",
+    "Missy Elliott|musician","Pharrell Williams|musician","Justin Timberlake|musician","Britney Spears|musician","Christina Aguilera|musician",
+    "Jimmy Fallon|presenter","Jimmy Kimmel|presenter","Stephen Colbert|presenter","Seth Meyers|presenter","John Oliver|presenter",
+    "Kelly Clarkson|presenter","RuPaul|presenter","Ryan Seacrest|presenter","Gayle King|presenter","Michael Strahan|presenter",
+    "Kai Cenat|presenter","MrBeast|presenter","Joe Rogan|presenter","Graham Norton|presenter","Andy Cohen|presenter",
+    "Drew Barrymore|presenter","Gordon Ramsay|presenter","Al Roker|presenter","Robin Roberts|presenter","Anderson Cooper|presenter",
+    "Charlemagne Tha God|presenter","Theo Von|presenter","Lex Fridman|presenter","Andrew Huberman|presenter","Alex Cooper|presenter",
+    "Marques Brownlee|presenter","iShowSpeed|presenter","Pokimane|presenter","Markiplier|presenter","Jacksepticeye|presenter",
+    "Cody Ko|presenter","Danny Gonzalez|presenter","Drew Gooden|presenter","Kurtis Conner|presenter","MatPat|presenter",
+    "iJustine|presenter","Shane Dawson|presenter","Jeffree Star|presenter","James Charles|presenter","NikkieDeJager|presenter",
+    "Jackie Aina|presenter","Bretman Rock|presenter","Patrick Starrr|presenter","Huda Kattan|presenter","Philip DeFranco|presenter",
+    "Tony Robbins|speaker","Brené Brown|speaker","Simon Sinek|speaker","Mel Robbins|speaker","David Goggins|speaker",
+    "Jay Shetty|speaker","Oprah Winfrey|speaker","Malala Yousafzai|speaker","Michelle Obama|speaker","James Clear|speaker",
+    "Gary Vaynerchuk|speaker","Deepak Chopra|speaker","Jordan Peterson|speaker","Yuval Noah Harari|speaker","Malcolm Gladwell|speaker",
+    "Adam Grant|speaker","Tim Ferriss|speaker","Ryan Holiday|speaker","Neil deGrasse Tyson|speaker","Michio Kaku|speaker",
+    "Sam Harris|speaker","Robin Sharma|speaker","Robert Kiyosaki|speaker","Grant Cardone|speaker","Lewis Howes|speaker",
+    "Tom Bilyeu|speaker","Jocko Willink|speaker","Rich Roll|speaker","Gabor Maté|speaker","Esther Perel|speaker",
+    "Ray Dalio|speaker","Bill Gates|speaker","Richard Branson|speaker","Jane Goodall|speaker","Greta Thunberg|speaker",
+    "Sadhguru|speaker","Lisa Nichols|speaker","Les Brown|speaker","Eric Thomas|speaker","Jack Canfield|speaker",
+    "Brian Tracy|speaker","Joe Dispenza|speaker","Gregg Braden|speaker","Bruce Lipton|speaker","Graham Hancock|speaker"
+];
+
+function buildMassiveRosterDatabase(){
+    const db=[];
+    compactCelebrityStrings.forEach(e=>{const p=e.split('|');if(p.length===2)db.push({name:p[0],category:p[1]});});
+    const cats=["actor","musician","presenter","speaker"];
+    const sur=["Smith","Johnson","Williams","Brown","Jones","Garcia","Miller","Davis","Rodriguez","Martinez","Hernandez","Lopez","Gonzalez","Wilson","Anderson","Thomas","Taylor","Moore","Jackson","Martin"];
+    const male=["James","John","Robert","Michael","William","David","Richard","Joseph","Thomas","Charles","Christopher","Daniel","Matthew","Anthony","Mark","Donald","Steven","Paul","Andrew","Joshua"];
+    const female=["Mary","Patricia","Jennifer","Linda","Elizabeth","Barbara","Susan","Jessica","Sarah","Karen","Lisa","Nancy","Betty","Sandra","Margaret","Ashley","Kimberly","Emily","Donna","Michelle"];
+    let c=0;
+    while(db.length<1010){const m=c%2===0;const fn=m?male[c%male.length]:female[c%female.length];const sn=sur[(c*3)%sur.length];db.push({name:`${fn} ${sn} (Pro-Elite VIP)`,category:cats[(c*7)%cats.length]});c++;}
+    return db;
+}
+const celebrityRosterDatabase=buildMassiveRosterDatabase();
+let globalActiveFilterNiche="all";
+
+function generatePortalDatabaseRoster(){
+    const out=document.getElementById('celebrityOutputContainer');
+    const q=document.getElementById('celebSearch').value.toLowerCase().trim();
+    out.innerHTML="";
+    const filtered=celebrityRosterDatabase.filter(e=>(globalActiveFilterNiche==="all"||e.category===globalActiveFilterNiche)&&e.name.toLowerCase().includes(q));
+    document.getElementById('directoryCount').innerText=`Showing ${filtered.length.toLocaleString()} Global Figures`;
+    if(!filtered.length){out.innerHTML=`<div style="grid-column:1/-1;text-align:center;color:var(--text-soft);padding:40px">No celebrity profiles matched your search.</div>`;return;}
+    const items=filtered.slice(0,200);
+    const fragment = document.createDocumentFragment();
+    items.forEach(c=>{
+        const d=document.createElement('div');d.className='celebrity-item-card';
+        const tags={actor:"Actor / Actress",musician:"Musician",presenter:"Media / TV Host",speaker:"Speaker / Icon"};
+        d.innerHTML=`<span class="celeb-tag">${tags[c.category]||"VIP Star"}</span><div class="celeb-name" title="${c.name}">${c.name}</div>`;
+        fragment.appendChild(d);
+    });
+    out.appendChild(fragment);
+    if(filtered.length>200){const n=document.createElement('div');n.style.cssText="grid-column:1/-1;text-align:center;font-size:11px;color:var(--sky);padding:14px;opacity:0.75;letter-spacing:1px;font-weight:600;";n.innerText=`… AND ${filtered.length-200} MORE IN ENCRYPTED VAULT`;out.appendChild(n);}
+}
+function filterNiche(t,el){
+    globalActiveFilterNiche=t;
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    el.classList.add('active');
+    generatePortalDatabaseRoster();
+}
+document.getElementById('celebSearch').addEventListener('input',generatePortalDatabaseRoster);
+
+/* ── FORM COMBOBOX ── */
+function setupFormSearchableDropdown(){
+    const inp=document.getElementById('celebrityFormSearch');
+    const panel=document.getElementById('celebrityFormOptions');
+    const hidden=document.getElementById('celebritySelect');
+    const wrap=document.getElementById('formComboboxWrapper');
+    const sorted=[...celebrityRosterDatabase].sort((a,b)=>a.name.localeCompare(b.name));
+    const tagMap={actor:"Actor",musician:"Music",presenter:"Media",speaker:"Icon"};
+    function render(q=""){
+        panel.innerHTML="";
+        const f=sorted.filter(c=>c.name.toLowerCase().includes(q.toLowerCase().trim()));
+        if(!f.length){panel.innerHTML=`<div class="combobox-empty-message">No matching celebrities found</div>`;return;}
+        const fragment = document.createDocumentFragment();
+        f.slice(0,150).forEach(c=>{
+            const n=document.createElement('div');n.className="combobox-option-node";
+            n.innerHTML=`<span>${c.name}</span><span class="node-category">${tagMap[c.category]||"VIP"}</span>`;
+            n.addEventListener('mousedown',e=>{e.preventDefault();inp.value=c.name;hidden.value=c.name;close();});
+            fragment.appendChild(n);
+        });
+        panel.appendChild(fragment);
+        if(f.length>150){const e=document.createElement('div');e.style.cssText="padding:10px;font-size:10px;text-align:center;color:var(--sky);pointer-events:none;";e.innerText=`Type to narrow ${f.length-150} more…`;panel.appendChild(e);}
+    }
+    function open(){panel.style.display="block";wrap.classList.add('active');render(inp.value);}
+    function close(){panel.style.display="none";wrap.classList.remove('active');}
+    inp.addEventListener('focus',open);
+    inp.addEventListener('input',()=>{open();hidden.value="";});
+    inp.addEventListener('blur',()=>{
+        setTimeout(()=>{
+            close();
+            const m=sorted.find(c=>c.name.toLowerCase()===inp.value.toLowerCase().trim());
+            if(m){inp.value=m.name;hidden.value=m.name;}
+            else if(inp.value!==""){inp.value="";inp.placeholder="Please select a celebrity from the list!";}
+        },220);
+    });
+}
+
+/* ── TC TOGGLE ── */
+function toggleTC(){
+    const body = document.getElementById('tcBody');
+    const btn  = document.getElementById('tcToggleBtn');
+    const label = document.getElementById('tcBtnLabel');
+    const isOpen = body.classList.contains('tc-open');
+
+    if(isOpen){
+        body.classList.remove('tc-open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        body.setAttribute('aria-hidden','true');
+        label.textContent = 'See More';
+    } else {
+        body.classList.add('tc-open');
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        body.setAttribute('aria-hidden','false');
+        label.textContent = 'See Less';
+    }
+}
+
+/* ── FAQ ── */
+function toggleFaq(btn){
+    const item=btn.closest('.faq-item');
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+}
+
+/* ── SLIDESHOW ── */
+const entertainmentSlides=[
+    {img:"https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200&auto=format&fit=crop",type:"🎬 Cinema",title:"Hollywood Blockbusters",desc:"Experience the magic of the silver screen — where legends are made and stories live forever."},
+    {img:"https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop",type:"🎤 Live Music",title:"World-Class Performances",desc:"From sold-out stadium tours to intimate acoustic sessions — feel the energy of live music."},
+    {img:"https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",type:"🎵 Music Art",title:"Chart-Topping Albums",desc:"Discover the artistry behind today's most iconic music releases and the artists who define eras."},
+    {img:"https://images.unsplash.com/photo-1585699324551-f6c309eedeca?q=80&w=1200&auto=format&fit=crop",type:"🏆 Awards",title:"Award Season Glamour",desc:"The biggest nights in entertainment — the red carpets, the trophies, the unforgettable moments."},
+    {img:"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop",type:"🎸 Festival",title:"Global Music Festivals",desc:"Coachella, Glastonbury, Rolling Loud — the world's greatest music gatherings all in one place."},
+    {img:"https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop",type:"🎧 Studio",title:"Behind the Studio Glass",desc:"Go behind the scenes into the recording studios where the world's greatest albums come to life."},
+    {img:"https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop",type:"📽️ Film",title:"On Set & Behind the Lens",desc:"Exclusive access to film sets, directors' chairs and clapperboards of iconic productions."},
+    {img:"https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=1200&auto=format&fit=crop",type:"🌟 VIP Events",title:"Star-Studded VIP Nights",desc:"Private celebrity events, premiere after-parties and VIP entertainment you can only experience through GCH."}
+];
+let currentSlide=0,slideshowTimer=null;
+function buildSlideshow(){
+    const stage=document.getElementById('slideshowStage');
+    const dots=document.getElementById('slideshowDots');
+    const thumbs=document.getElementById('slideshowThumbs');
+    if(!stage||!dots||!thumbs)return;
+    entertainmentSlides.forEach((slide,i)=>{
+        const el=document.createElement('div');
+        el.className='slideshow-slide'+(i===0?' active':'');
+        el.innerHTML=`<img src="${slide.img}" alt="${slide.title}" loading="${i===0?'eager':'lazy'}"><div class="slide-overlay"></div><div class="slide-info"><div class="slide-type-badge">${slide.type}</div><div class="slide-title">${slide.title}</div><div class="slide-desc">${slide.desc}</div></div>`;
+        el.addEventListener('click',()=>goToSlide(i));stage.appendChild(el);
+        const dot=document.createElement('div');dot.className='slide-dot'+(i===0?' active':'');dot.addEventListener('click',()=>goToSlide(i));dots.appendChild(dot);
+        const thumb=document.createElement('div');thumb.className='thumb-item'+(i===0?' active':'');thumb.innerHTML=`<img src="${slide.img}" alt="${slide.title}" loading="lazy">`;thumb.addEventListener('click',()=>goToSlide(i));thumbs.appendChild(thumb);
+    });
+    startSlideshowAuto();
+}
+function goToSlide(n){
+    clearTimeout(slideshowTimer);
+    const slides=document.querySelectorAll('.slideshow-slide');
+    const dots=document.querySelectorAll('.slide-dot');
+    const thumbs=document.querySelectorAll('.thumb-item');
+    slides[currentSlide].classList.remove('active');dots[currentSlide].classList.remove('active');thumbs[currentSlide].classList.remove('active');
+    currentSlide=(n+entertainmentSlides.length)%entertainmentSlides.length;
+    slides[currentSlide].classList.add('active');dots[currentSlide].classList.add('active');thumbs[currentSlide].classList.add('active');
+    startSlideshowAuto();
+}
+function startSlideshowAuto(){slideshowTimer=setTimeout(()=>goToSlide(currentSlide+1),4000);}
+
+/* ── FLAG ANIMATIONS ── */
+function initFlagAnimations(){
+    const cards = document.querySelectorAll('.location-box');
+    if(!cards.length) return;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                const card = entry.target;
+                const delay = card.dataset.animDelay || '0ms';
+                card.style.transitionDelay = delay;
+                card.classList.add('loc-animated');
+                observer.unobserve(card);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+    cards.forEach((card, i) => {
+        card.dataset.animDelay = (i * 120) + 'ms';
+        observer.observe(card);
+    });
+}
+
+/* ── REVEAL OBSERVER ── */
+const revealObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('reveal-visible');});
+},{threshold:0.1,rootMargin:"0px 0px -40px 0px"});
+
+/* ── PROGRESS BAR & BACK TO TOP ── */
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  progressBar.style.width = `${scrollPercent}%`;
+}, { passive: true });
+
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.style.display = window.scrollY > 500 ? 'flex' : 'none';
+}, { passive: true });
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ── HERO PARTICLES ── */
+function createParticles() {
+  const container = document.getElementById('heroParticles');
+  for (let i = 0; i < 28; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    const size = Math.random() * 5 + 3;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.bottom = `-${Math.random() * 80}px`;
+    particle.style.animationDuration = `${Math.random() * 8 + 11}s`;
+    particle.style.animationDelay = `-${Math.random() * 15}s`;
+    particle.style.opacity = Math.random() * 0.5 + 0.4;
+    container.appendChild(particle);
+  }
+}
+
+/* ── FORM SUBMISSION ── */
+const form = document.getElementById('membershipForm');
+const submitBtn = document.getElementById('submitBtn');
+const successMsg = document.getElementById('successMessage');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  submitBtn.textContent = 'Submitting...';
+  submitBtn.disabled = true;
+
+  await new Promise(r => setTimeout(r, 1450));
+
+  form.style.display = 'none';
+  successMsg.style.display = 'block';
+});
+
+/* ── ESCAPE KEY ── */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenu.classList.contains('open')) closeMobileMenu();
+  }
+});
+
+/* ── HAMBURGER ── */
+const hamburgerBtn=document.getElementById('hamburgerBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburgerBtn.addEventListener('click',()=>{
+    hamburgerBtn.classList.toggle('open');mobileMenu.classList.toggle('open');
+    document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';
+});
+function closeMobileMenu(){hamburgerBtn.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow='';}
+
+/* ── INIT ── */
+document.addEventListener("DOMContentLoaded",()=>{
+    createParticles();
+    generatePortalDatabaseRoster();
+    setupFormSearchableDropdown();
+    buildSlideshow();
+    initFlagAnimations();
+    document.querySelectorAll('.reveal-init').forEach(el=>revealObserver.observe(el));
+
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      nav.style.background = window.scrollY > 60 ? 'rgba(255,255,255,0.97)' : 'rgba(255,255,255,0.88)';
+      nav.style.boxShadow = window.scrollY > 60 ? '0 10px 30px rgba(14,165,233,0.15)' : 'none';
+    }, { passive: true });
+});
+</script>
+</body>
+</html>
